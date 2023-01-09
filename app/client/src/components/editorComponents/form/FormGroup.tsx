@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { FormGroup, Classes } from "@blueprintjs/core";
+import { ReactNode } from "react";
 type FormGroupProps = {
   fill?: boolean;
+  children?: ReactNode;
 };
 const StyledFormGroup = styled(FormGroup)<FormGroupProps>`
   & {
