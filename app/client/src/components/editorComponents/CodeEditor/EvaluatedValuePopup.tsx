@@ -32,13 +32,13 @@ import copy from "copy-to-clipboard";
 
 import { EvaluationError } from "utils/DynamicBindingUtils";
 import * as Sentry from "@sentry/react";
-import { Severity } from "@sentry/react";
 import { CodeEditorExpected } from "components/editorComponents/CodeEditor/index";
 import { Indices, Layers } from "constants/Layers";
 import { useDispatch, useSelector } from "react-redux";
 import { getEvaluatedPopupState } from "selectors/editorContextSelectors";
 import { AppState } from "@appsmith/reducers";
 import { setEvalPopupState } from "actions/editorContextActions";
+import { SeverityLevel } from "@sentry/react";
 
 const modifiers: IPopoverSharedProps["modifiers"] = {
   offset: {
@@ -250,7 +250,7 @@ export function PreparedStatementViewer(props: {
   const { parameters, value } = props.evaluatedValue;
   if (!value) {
     Sentry.captureException("Prepared Statement got no value", {
-      level: Severity.Debug,
+      level: "debug" as SeverityLevel,
       extra: { props },
     });
     return <div />;

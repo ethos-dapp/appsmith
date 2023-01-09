@@ -224,14 +224,14 @@ export function* evalErrorHandler(
               diffs,
             },
             // Level is warning because it could be a user error
-            level: Sentry.Severity.Warning,
+            level: "warning",
           });
           // Log an analytics event for cyclical dep errors
           AnalyticsUtil.logEvent("CYCLICAL_DEPENDENCY_ERROR", {
             node,
             entityType,
             // Level is warning because it could be a user error
-            level: Sentry.Severity.Warning,
+            level: "warning",
           });
         }
 
