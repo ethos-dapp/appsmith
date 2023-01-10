@@ -1,6 +1,6 @@
 import React, { createRef, useEffect, useState } from "react";
 import { AnyStyledComponent } from "styled-components";
-import { Tooltip } from "@blueprintjs/core";
+import { Tooltip } from "components/temporary";
 
 import { Colors } from "constants/Colors";
 import styled from "constants/DefaultTheme";

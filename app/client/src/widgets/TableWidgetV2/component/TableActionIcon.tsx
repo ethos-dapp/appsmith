@@ -1,5 +1,5 @@
 import React from "react";
-import { Tooltip } from "@blueprintjs/core";
+import { Tooltip } from "components/temporary";
 import { IconWrapper } from "constants/IconConstants";
 import { Colors } from "constants/Colors";
 import { TableIconWrapper } from "./TableStyledWrappers";
