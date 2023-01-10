@@ -1999,7 +1999,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
       clear();
     } else {
       /*
-       * We need to let the evaulations compute derived property (filteredTableData)
+       * We need to let the evaluations compute derived property (filteredTableData)
        * before we clear the editableCell to avoid the text flickering
        */
       this.inlineEditTimer = setTimeout(clear, 100);
