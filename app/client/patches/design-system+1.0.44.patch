@@ -1,0 +1,13 @@
+diff --git a/node_modules/design-system/build/FormGroup/index.d.ts b/node_modules/design-system/build/FormGroup/index.d.ts
+index 7b34cae..71d6da9 100644
+--- a/node_modules/design-system/build/FormGroup/index.d.ts
++++ b/node_modules/design-system/build/FormGroup/index.d.ts
+@@ -1,6 +1,7 @@
+ import { FormGroup } from "@blueprintjs/core";
++import { PropsWithChildren } from "react";
+ declare type FormGroupProps = {
+     fill?: boolean;
+ };
+-declare const StyledFormGroup: import("styled-components").StyledComponent<typeof FormGroup, any, FormGroupProps, never>;
++declare const StyledFormGroup: import("styled-components").StyledComponent<typeof FormGroup, any, PropsWithChildren<FormGroupProps>, never>;
+ export default StyledFormGroup;
